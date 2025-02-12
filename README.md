@@ -58,10 +58,11 @@ Thanks to the contributors of the [opencompass](https://github.com/open-compass/
 If you use sailcompass benchmark in your work, please cite
 
 ```
-@misc{sailcompass,
-      title={SailCompass: Towards Reproducible and Robust Evaluation for Southeast Asian Languages}, 
-      author={Jia Guo and Longxu Dou and Guangtao Zeng and Stanley Kok and Wei Lu and Qian Liu},
-      year={2024},
+@article{sailcompass,
+  title={SailCompass: Towards Reproducible and Robust Evaluation for Southeast Asian Languages},
+  author={Guo, Jia and Dou, Longxu and Zeng, Guangtao and Kok, Stanley and Lu, Wei and Liu, Qian},
+  journal={arXiv preprint arXiv:2412.01186},
+  year={2024}
 }
 ```
 
