@@ -1,13 +1,11 @@
-from opencompass.models import HuggingFaceCausalLM
-
-
+from opencompass.models import VLLM
 
 models = [
     dict(
-        type=HuggingFaceCausalLM,
-        abbr='typhoon_8b_v1_5',
-        path="scb10x/llama-3-typhoon-v1.5-8b",
-        tokenizer_path="scb10x/llama-3-typhoon-v1.5-8b",
+        type=VLLM,
+        abbr='sailor2_8B_4bit',
+        path='itdainb/Sailor2-8B-gptq-autoround-4bit',
+        tokenizer_path='itdainb/Sailor2-8B-gptq-autoround-4bit',
         model_kwargs=dict(
             device_map='auto',
             trust_remote_code=True
@@ -25,5 +23,3 @@ models = [
         run_cfg=dict(num_gpus=1, num_procs=1),
     )
 ]
-
-

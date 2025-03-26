@@ -1,11 +1,11 @@
-from opencompass.models import HuggingFaceCausalLM
+from opencompass.models import VLLM
 
 models = [
     dict(
-        type=HuggingFaceCausalLM,
-        abbr='qwen1.5-7b-hf',
-        path="Qwen/Qwen1.5-7B",
-        tokenizer_path='Qwen/Qwen1.5-7B',
+        type=VLLM,
+        abbr='sailor2_1B_4bit',
+        path='itdainb/Sailor2-1B-gptq-autoround-4bit',
+        tokenizer_path='itdainb/Sailor2-1B-gptq-autoround-4bit',
         model_kwargs=dict(
             device_map='auto',
             trust_remote_code=True
