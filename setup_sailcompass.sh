@@ -9,12 +9,9 @@ echo "from .sailor_text_postprocessors import *  # noqa" >> "opencompass/opencom
 ###=====generation tasks======
 ###question answering
 echo "from .xquad import *  # noqa: F401, F403" >> "opencompass/opencompass/datasets/__init__.py"
-echo "from .tydiqa_id import *  # noqa: F401, F403" >> "opencompass/opencompass/datasets/__init__.py"
 ###machine translation
 echo "from .flores200 import *  # noqa: F401, F403" >> "opencompass/opencompass/datasets/__init__.py"
 ###text summarization
-echo "from .thaisum import *  # noqa: F401, F403" >> "opencompass/opencompass/datasets/__init__.py"
-echo "from .indosum import *  # noqa: F401, F403" >> "opencompass/opencompass/datasets/__init__.py"
 echo "from .xlsum_vi import *  # noqa: F401, F403" >> "opencompass/opencompass/datasets/__init__.py"
 ###=====mcq tasks======
 ###examination
@@ -26,14 +23,11 @@ echo "from .belebele import *  # noqa: F401, F403" >> "opencompass/opencompass/d
 ###=====classification tasks======
 ###natural language inference
 echo "from .xnli import *  # noqa: F401, F403" >> "opencompass/opencompass/datasets/__init__.py"
-echo "from .indonli import *  # noqa: F401, F403" >> "opencompass/opencompass/datasets/__init__.py"
 ###sentiment analysis
-echo "from .wisesight_senti import *  # noqa: F401, F403" >> "opencompass/opencompass/datasets/__init__.py"
-echo "from .indolem_senti import *  # noqa: F401, F403" >> "opencompass/opencompass/datasets/__init__.py"
 echo "from .vsmec import *  # noqa: F401, F403" >> "opencompass/opencompass/datasets/__init__.py"
 
 cp eval_sailcompass.py opencompass/configs/
+cp eval_sailcompass_vllm.py opencompass/configs/
 
-cd opencompass
-ln -s ../data/data
-cd ..
+cp ppl_vllm.py opencompass/opencompass/models/vllm.py
+python fix_mmengine.py

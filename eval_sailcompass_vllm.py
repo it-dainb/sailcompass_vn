@@ -2,11 +2,11 @@ from mmengine.config import read_base
 
 with read_base():
     #------------------------------------------------------
-    from .models.sailor2_1b import models as sailor2_1b
-    from .models.sailor2_8b import models as sailor2_8b
+    from .models.vllm_sailor2_1b import models as sailor2_1b
+    from .models.vllm_sailor2_8b import models as sailor2_8b
 
-    from .models.sailor2_1b_4bit import models as sailor2_1b_4bit
-    from .models.sailor2_8b_4bit import models as sailor2_8b_4bit
+    from .models.vllm_sailor2_1b_4bit import models as sailor2_1b_4bit
+    from .models.vllm_sailor2_8b_4bit import models as sailor2_8b_4bit
 
     #------------------------------------------------------
     # QA
